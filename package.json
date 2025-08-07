@@ -1,0 +1,21 @@
+{
+  "name": "catalogo_productos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "echo Construyendo proyecto...",
+    "test": "echo Corriendo tests..."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elCesarP/despliegueP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elCesarP/despliegueP/issues"
+  },
+  "homepage": "https://github.com/elCesarP/despliegueP#readme"
+}
