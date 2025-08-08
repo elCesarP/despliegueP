@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:18' }
+    }
     stages {
         stage('Build') {
             steps {
@@ -14,8 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                // comandos para desplegar, ejemplo:
-                sh 'echo Desplegando...'
+                sh 'echo "Desplegando..."'
             }
         }
     }
