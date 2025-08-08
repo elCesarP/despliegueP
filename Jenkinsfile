@@ -1,17 +1,23 @@
 pipeline {
-    agent {
-        docker { image 'node:18' }
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                script {
+                    docker.image('node:18').inside {
+                        sh 'npm install'
+                        sh 'npm run build'
+                    }
+                }
             }
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                script {
+                    docker.image('node:18').inside {
+                        sh 'npm test'
+                    }
+                }
             }
         }
         stage('Deploy') {
